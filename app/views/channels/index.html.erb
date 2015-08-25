@@ -1,0 +1,13 @@
+<h3><%= link_to 'Locations', locations_path %></h3>
+
+<% @channels.each do |channel| %>
+    <h2>id: <%= channel.id %> | <%= channel.name %></h2>
+
+    <h3>Locations:</h3>
+
+    <% channel.locations.each do |location|  %>
+        <ul>
+          <li>id: <%= location.id %> / <%= location.name %> / <%= location.location %></li>
+        </ul>
+    <% end  %>
+<% end %>
